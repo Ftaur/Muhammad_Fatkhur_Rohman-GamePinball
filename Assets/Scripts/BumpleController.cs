@@ -10,6 +10,10 @@ public class BumpleController : MonoBehaviour
 	public Collider bola;
     // untuk mengatur warna bumper
     public Color color;
+    // tambahkan audio manager untuk mengakses fungsi pada audio managernya
+    public AudioManager audioManager;
+    // tambahkan vfx manager untuk mengakses fungsi pada audio managernya
+    public VFXManager VFXManager;
     // Untuk Animasi
     private Animator animator;
     private Renderer renderer;
@@ -36,6 +40,10 @@ public class BumpleController : MonoBehaviour
             bolaRig.velocity *= multiplier;
             // saat ditabrak oleh bola, kita tinggal aktifkan trigger Hit
             animator.SetTrigger("Hit");
+            // kita jalankan SFX saat tabrakan dengan bola pada posisi tabrakannya
+		    audioManager.PlaySFX(collision.transform.position);
+            // kita jalankan VFX saat tabrakan dengan bola pada posisi tabrakannya
+		    VFXManager.PlayVFX(collision.transform.position);
         }
 	}
 }

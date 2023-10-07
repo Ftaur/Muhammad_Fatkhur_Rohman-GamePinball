@@ -16,6 +16,10 @@ public class SwitchController : MonoBehaviour
     // menyimpan variabel material nyala dan mati untuk merubah warna
     public Material offMaterial;
     public Material onMaterial;
+    // tambahkan audio manager untuk mengakses fungsi pada audio managernya
+    public AudioManager audioManager;
+    // tambahkan vfx manager untuk mengakses fungsi pada audio managernya
+    public VFXManager VFXManager;
     // menyimpan state switch apakah nyala atau mati
     // menggantikan isOn
     private SwitchState state;
@@ -47,6 +51,10 @@ public class SwitchController : MonoBehaviour
             // Set(!isOn);
             // diubah menjadi toggle
             Toggle();
+            // kita jalankan SFX saat tabrakan dengan bola pada posisi tabrakannya
+		    audioManager.PlaySFX(GetComponent<Collider>().transform.position);
+            // kita jalankan VFX saat tabrakan dengan bola pada posisi tabrakannya
+		    VFXManager.PlayVFX(GetComponent<Collider>().transform.position);
         }
     }
 

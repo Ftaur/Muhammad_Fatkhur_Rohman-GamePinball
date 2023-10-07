@@ -33,7 +33,7 @@ public class LauncherController : MonoBehaviour
 	{
 		if (collision.collider == bola)
 		{
-            Debug.Log("Kena Bola");
+            // Debug.Log("Kena Bola");
 			ReadInput(bola);
 		}
 	}
