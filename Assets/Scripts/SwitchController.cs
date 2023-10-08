@@ -20,6 +20,8 @@ public class SwitchController : MonoBehaviour
     public AudioManager audioManager;
     // tambahkan vfx manager untuk mengakses fungsi pada audio managernya
     public VFXManager VFXManager;
+    public ScoreManager scoreManager;
+    public float score;
     // menyimpan state switch apakah nyala atau mati
     // menggantikan isOn
     private SwitchState state;
@@ -80,6 +82,8 @@ public class SwitchController : MonoBehaviour
     // fungsi untuk on off
     private void Toggle()
     {
+        //tambah score saat menyalakan atau mematikan switch
+        scoreManager.AddScore(score);
         // dari on --> off
         if (state == SwitchState.On)
         {

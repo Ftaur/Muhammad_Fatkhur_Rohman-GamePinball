@@ -126,6 +126,8 @@ MonoBehaviour:
   color: {r: 0.09803922, g: 0.23994304, b: 0.23994304, a: 0}
   audioManager: {fileID: 0}
   VFXManager: {fileID: 0}
+  scoreManager: {fileID: 0}
+  score: 5
 --- !u!95 &1295749594692183570
 Animator:
   serializedVersion: 5

@@ -14,6 +14,9 @@ public class BumpleController : MonoBehaviour
     public AudioManager audioManager;
     // tambahkan vfx manager untuk mengakses fungsi pada audio managernya
     public VFXManager VFXManager;
+    // untuk mengakses score manager
+    public ScoreManager scoreManager;
+    public float score;
     // Untuk Animasi
     private Animator animator;
     private Renderer renderer;
@@ -44,6 +47,8 @@ public class BumpleController : MonoBehaviour
 		    audioManager.PlaySFX(collision.transform.position);
             // kita jalankan VFX saat tabrakan dengan bola pada posisi tabrakannya
 		    VFXManager.PlayVFX(collision.transform.position);
+            //tambah score saat menabrak bumper
+            scoreManager.AddScore(score);
         }
 	}
 }

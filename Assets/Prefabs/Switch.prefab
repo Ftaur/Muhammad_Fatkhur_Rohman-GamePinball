@@ -119,6 +119,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adeb821f6e61d1443b9467d3294703b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bola: {fileID: 0}
   offMaterial: {fileID: 2100000, guid: 5de1b87c2a08d4f45b30f1baead3c769, type: 2}
   onMaterial: {fileID: 2100000, guid: 3109cf4e95b2f1c4e8702123bd5663e6, type: 2}
-  bola: {fileID: 0}
+  audioManager: {fileID: 0}
+  VFXManager: {fileID: 0}
+  scoreManager: {fileID: 0}
+  score: 10
